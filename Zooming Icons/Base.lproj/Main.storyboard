@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sQV-ie-rrK">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="z4r-zX-6ru">
+            <objects>
+                <collectionViewController id="sQV-ie-rrK" customClass="MenuViewController" customModule="Zooming_Icons" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vyX-wK-4dI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F3C-38-DzH">
+                            <size key="itemSize" width="80" height="80"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="4OJ-2F-M4a" customClass="MenuCollectionViewCell" customModule="Zooming_Icons" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Hp-Eb-8ZN">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9p-sQ-eAQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="v9p-sQ-eAQ" firstAttribute="top" secondItem="8Hp-Eb-8ZN" secondAttribute="top" id="H6g-dK-5I3"/>
+                                                <constraint firstAttribute="trailing" secondItem="v9p-sQ-eAQ" secondAttribute="trailing" id="OSg-Fg-kBQ"/>
+                                                <constraint firstItem="v9p-sQ-eAQ" firstAttribute="leading" secondItem="8Hp-Eb-8ZN" secondAttribute="leading" id="lyc-bW-8NF"/>
+                                                <constraint firstAttribute="bottom" secondItem="v9p-sQ-eAQ" secondAttribute="bottom" id="tgQ-FT-RFg"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="8Hp-Eb-8ZN" firstAttribute="top" secondItem="4OJ-2F-M4a" secondAttribute="top" id="0fd-OI-qR7"/>
+                                    <constraint firstItem="8Hp-Eb-8ZN" firstAttribute="leading" secondItem="4OJ-2F-M4a" secondAttribute="leading" id="B2x-wg-7uv"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Hp-Eb-8ZN" secondAttribute="bottom" id="Phx-uG-gew"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Hp-Eb-8ZN" secondAttribute="trailing" id="RYr-Zt-PXz"/>
+                                </constraints>
+                                <size key="customSize" width="80" height="80"/>
+                                <connections>
+                                    <outlet property="imageView" destination="v9p-sQ-eAQ" id="2hC-D0-GH4"/>
+                                    <outlet property="viewColour" destination="8Hp-Eb-8ZN" id="IXW-yd-uMb"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sQV-ie-rrK" id="Lwr-id-IyU"/>
+                            <outlet property="delegate" destination="sQV-ie-rrK" id="QD4-zF-pz2"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzJ-9m-Ma4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="403"/>
+        </scene>
+    </scenes>
+</document>
